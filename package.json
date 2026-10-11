@@ -1,0 +1,20 @@
+{
+  "name": "karirku",
+  "version": "1.0.0",
+  "private": true,
+  "description": "KarirKU - chatbot konsultan karier dan CV untuk fresh graduate di Indonesia, berbasis Gemini API",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@google/genai": "^1.2.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
