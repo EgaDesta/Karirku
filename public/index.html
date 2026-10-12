@@ -248,7 +248,12 @@
       addMessage(data.reply, 'bot');
     } catch (err) {
       typing.remove();
-      addMessage('Gagal terhubung ke server. Pastikan server KarirKU masih jalan.', 'error');
+      addMessage(
+        window.location.protocol === 'file:'
+          ? 'Halaman ini dibuka langsung dari file, jadi tidak bisa menghubungi server.\n\nJalankan "npm start" di folder KarirKU, lalu buka http://localhost:3000 (bukan dobel-klik file index.html).'
+          : 'Gagal terhubung ke server. Pastikan server KarirKU masih jalan (npm start).',
+        'error'
+      );
       history.pop();
     } finally {
       setBusy(false);
